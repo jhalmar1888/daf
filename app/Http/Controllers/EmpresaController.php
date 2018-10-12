@@ -61,6 +61,6 @@ class EmpresaController extends Controller
     {
         $empresa = Empresa::find($id);
         $empresa->delete();
-        return back()->with('info', 'El nombre fue eleiminado');
+        return back()->with('info', 'La Empresa fue eleiminada');
     }
 }

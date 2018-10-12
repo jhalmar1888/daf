@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrdenPago" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f63840ff-b51a-4ec7-8270-98ffc76997f4">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="edd"/>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrdenPago" pageWidth="612" pageHeight="792" columnWidth="500" leftMargin="56" rightMargin="56" topMargin="56" bottomMargin="56" uuid="f63840ff-b51a-4ec7-8270-98ffc76997f4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="daf"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
 	<parameter name="id" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT id, "Ordenpago", "Cheque", "Fecha", "Objeto", "Detalle", "DocRespaldo",
@@ -46,82 +55,86 @@ FROM "Product";]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="110" splitType="Stretch">
-			<image>
-				<reportElement x="514" y="0" width="50" height="50" uuid="25bbac8a-c631-4407-9a98-415041df8314"/>
-				<imageExpression><![CDATA[lo]]></imageExpression>
-			</image>
+		<band height="150" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="130" height="40" uuid="adfd033d-9d65-4479-afee-5385168d9004"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
 				<text><![CDATA[MINISTERIO DE DEFENSA
    U.E.R.H. - COFADENA
               BOLIVIA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="230" y="60" width="140" height="30" uuid="833130a4-975f-4996-9080-caddc7101d19"/>
+				<reportElement x="171" y="89" width="170" height="20" uuid="833130a4-975f-4996-9080-caddc7101d19"/>
 				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
+					<font fontName="Elephant" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ORDEN DE PAGO]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="230" y="30" width="160" height="16" uuid="1cd2b926-b83a-4f04-847d-49e90d4ecc53"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[O. P. Nº           /2018]]></text>
-			</staticText>
 			<textField>
-				<reportElement x="230" y="80" width="140" height="16" uuid="000a46b4-fd21-4f58-8988-c8af08139b37"/>
-				<textFieldExpression><![CDATA[" O.P.N " + " " + $F{Ordenpago} + " " + 2018]]></textFieldExpression>
+				<reportElement x="194" y="110" width="140" height="16" uuid="000a46b4-fd21-4f58-8988-c8af08139b37"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" O.P. No. " + " " + $F{Ordenpago} + " " + 2018]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="150" splitType="Stretch">
+		<band height="142" splitType="Stretch">
 			<staticText>
-				<reportElement x="1" y="0" width="570" height="30" uuid="e5f6758e-501f-406f-928b-ce6893157f9e"/>
+				<reportElement x="1" y="0" width="449" height="30" uuid="e5f6758e-501f-406f-928b-ce6893157f9e"/>
 				<textElement>
-					<font size="11"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
-				<text><![CDATA[DEL				: Tcln. DIM. Juan José garcia Paz
+				<text><![CDATA[DEL				: Tcln. DIM. Juan José Garcia Paz
 				  GERENTE - U.E.R.H.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="30" width="570" height="30" uuid="ef47ed3c-6171-4831-b19b-5f5275227ada"/>
+				<reportElement x="0" y="30" width="499" height="30" uuid="ef47ed3c-6171-4831-b19b-5f5275227ada"/>
 				<textElement>
-					<font size="11"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[VIA				: Cr. José Alberto Huanca Quispe
-			               DIRECTOR ADMINISTRATIVO FINANCIERO a.i. U.E.R.H.]]></text>
+			              DIRECTOR ADMINISTRATIVO FINANCIERO a.i. U.E.R.H.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="61" width="570" height="30" uuid="d89b2277-88aa-4e89-916c-f2bb8ada51f6"/>
+				<reportElement x="1" y="61" width="349" height="19" uuid="d89b2277-88aa-4e89-916c-f2bb8ada51f6"/>
 				<textElement>
-					<font size="11"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[A				: CONTABILIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="91" width="570" height="30" uuid="babafd25-25ef-40a7-a058-00cf9ad26d3b"/>
+				<reportElement x="1" y="81" width="249" height="18" uuid="babafd25-25ef-40a7-a058-00cf9ad26d3b"/>
 				<textElement>
-					<font size="11"/>
+					<font fontName="Arial" size="12"/>
 				</textElement>
 				<text><![CDATA[OBJETO			:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="168" y="90" width="402" height="30" uuid="04c14bdf-ea8a-4d82-987f-fadccca9cec4"/>
+				<reportElement x="168" y="81" width="331" height="17" uuid="04c14bdf-ea8a-4d82-987f-fadccca9cec4"/>
 				<textFieldExpression><![CDATA[$F{Objeto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="99" width="250" height="21" uuid="7ada74b5-a2f3-458a-a34c-908aeb65b498"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[FECHA			: La Paz,]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="210" y="99" width="100" height="21" uuid="bdb3ce62-5a1f-4d32-9cf4-3c0cd4e6e78b"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="184" splitType="Stretch">
-			<staticText>
-				<reportElement x="0" y="-29" width="570" height="30" uuid="7ada74b5-a2f3-458a-a34c-908aeb65b498"/>
-				<textElement>
-					<font size="11"/>
-				</textElement>
-				<text><![CDATA[FECHA				: La Paz,]]></text>
-			</staticText>
+		<band height="233" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="2" width="120" height="18" uuid="43ad501f-cec2-4987-8752-7792d08cd277"/>
 				<textElement>
@@ -129,19 +142,15 @@ FROM "Product";]]>
 				</textElement>
 				<text><![CDATA[Señora Contadora:]]></text>
 			</staticText>
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="204" y="-29" width="100" height="30" uuid="bdb3ce62-5a1f-4d32-9cf4-3c0cd4e6e78b"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<textField>
-				<reportElement x="1" y="30" width="570" height="100" isPrintWhenDetailOverflows="true" uuid="b4e2f3d3-0555-4677-8d48-f36eede19707"/>
-				<textElement>
+				<reportElement x="1" y="30" width="488" height="79" isPrintWhenDetailOverflows="true" uuid="b4e2f3d3-0555-4677-8d48-f36eede19707"/>
+				<textElement textAlignment="Justified">
 					<font size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[		      Proceder a la emision del cheque,+" "+$F{Detalle}+" "+ Segun Hoja de Tramite+" "+$F{DocRespaldo}+" "+por la suma de Bs. +" "+$F{MontoNumero} .- +" "+(+" "+$F{MontoLiteral}+" "+00/100 Bolivianos).+" "+A nombre de +" "+$F{NomEmpresa} +" "+con Cheque No. +" "+$F{Cheque}+" "+ de la cuenta corriente Fiscal No. 1-6455120 del Banci Union S.A.]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Proceder a la emision del cheque," +" "+ $F{Detalle} +" "+ "Segun Hoja de Tramite"+" "+$F{DocRespaldo} +" "+ "por la suma de Bs." +" "+$F{MontoNumero}+" "+ ".-" +" "+ "(" +" "+$F{MontoLiteral}+" "+"00/100 Bolivianos )."+" "+"A nombre de" +" "+$F{NomEmpresa} +" "+"con Cheque No." +" "+$F{Cheque}+" "+ "de la cuenta corriente Fiscal No. 1-6455120 del Banci Union S.A."]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="95" y="156" width="310" height="18" uuid="9baef584-6a36-4c5d-92e1-5c915e8a75a4"/>
+				<reportElement x="100" y="161" width="310" height="18" uuid="9baef584-6a36-4c5d-92e1-5c915e8a75a4"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -150,7 +159,7 @@ FROM "Product";]]>
 		</band>
 	</columnHeader>
 	<pageFooter>
-		<band height="33" splitType="Stretch">
+		<band height="51" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="70" height="28" uuid="4f27e288-77d0-44dd-8829-e70765237f73"/>
 				<textElement>
@@ -167,7 +176,7 @@ C. c. Arch.]]></text>
 			<textField evaluationTime="Report">
 				<reportElement x="278" y="2" width="100" height="30" uuid="a2bb8bb7-b8d0-4117-893a-e45186610be5"/>
 				<textElement textAlignment="Left"/>
-				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[" - " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>

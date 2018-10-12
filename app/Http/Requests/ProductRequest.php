@@ -25,15 +25,14 @@ class ProductRequest extends FormRequest
     public function rules(Request $request)
     {
         return [
-            'Ordenpago'    => 'required',
-            'Cheque'        => 'required',
-            'Fecha'         => 'required',
-            'Objeto'        => 'required',
-            'Detalle'       => 'required',
+            'Ordenpago'    => 'required|numeric',
+            'Cheque'        => 'required|numeric',
+            'Fecha'         => 'required|date',
+            'Objeto'        => 'required|regex:/^([a-zA-ZñÑáéíóúÁÉÍÓÚ_-])+((\s*)+([a-zA-ZñÑáéíóúÁÉÍÓÚ_-]*)*)+$/',
+            'Detalle'       => 'required|regex:/^([a-zA-ZñÑáéíóúÁÉÍÓÚ_-])+((\s*)+([a-zA-ZñÑáéíóúÁÉÍÓÚ_-]*)*)+$/',
             'DocRespaldo'  => 'required',
-            'MontoNumero'         => 'required',
-            'MontoLiteral'       => 'required',       
-            'Cuenta'        => 'required',
+            'MontoNumero'         => 'required|numeric',
+            'Cuenta'        => 'required|numeric',
 
         ];
     }

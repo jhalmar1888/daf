@@ -1,3 +1,0 @@
-<p class="alert alert-info">
-        Desde aqui podemos crear, editar, aliminar y listar los cheques......
-</p>

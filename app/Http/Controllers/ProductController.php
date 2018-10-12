@@ -9,6 +9,7 @@ use App\Http\Requests\ProductRequest;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use  NumberToWords\NumberToWords ;
+use NumerosEnLetras;
 
 class ProductController extends Controller
 {
@@ -29,9 +30,7 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {       
 
-        //$numberToWords  =  new  NumberToWords ();
-        //$numberTransformer  =  $numberToWords -> getNumberTransformer('1');
-        //$numberTransformer -> toWords ( 5120 );
+       
         $product = new Product;
                
         $product->Ordenpago   = $request->Ordenpago;
@@ -40,9 +39,12 @@ class ProductController extends Controller
         $product->Objeto        = $request->Objeto;
         $product->Detalle       = $request->Detalle;
 
+        $var = $request->MontoNumero;
+        $num = NumerosEnLetras::convertir("$var");
+        $product->MontoLiteral = $num;
+
         $product->DocRespaldo  = $request->DocRespaldo;
         $product->MontoNumero  = $request->MontoNumero;
-        $product->MontoLiteral = $request->MontoLiteral;
         
         $product->NomEmpresa = $request->NomEmpresa;
         $product->Cuenta      = $request->Cuenta;
@@ -58,7 +60,8 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $empresas = ['0' => 'Seleccionar...'] + Empresa::select('id', 'Empresa')->orderBy('Empresa', 'asc')->pluck('Empresa','id')->toArray();
-        return view('products.edit', compact('product','empresas'));
+        $cuenta = ['0' => 'Seleccionar...'] + Empresa::select('id', 'Cuenta')->orderBy('Cuenta', 'asc')->pluck('Cuenta','id')->toArray();
+        return view('products.edit', compact('product','empresas', 'cuenta'));
     }
 
     public function update(ProductRequest $request, $id)
@@ -69,10 +72,14 @@ class ProductController extends Controller
         $product->Cheque      = $request->Cheque;
         $product->Fecha         = $request->Fecha;
         $product->Objeto        = $request->Objeto;
+
+        $var = $request->MontoNumero;
+        $num = NumerosEnLetras::convertir("$var");
+        $product->MontoLiteral = $num;
+
         $product->Detalle       = $request->Detalle;
         $product->DocRespaldo  = $request->DocRespaldo;
         $product->MontoNumero  = $request->MontoNumero;
-        $product->MontoLiteral = $request->MontoLiteral;        
         $product->NomEmpresa    = $request->NomEmpresa;
         $product->Cuenta      = $request->Cuenta;
 
@@ -95,7 +102,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        return back()->with('info', 'El cheque fue eleiminado');
+        return back()->with('info', 'El cheque fue eliminado');
     }
 
     public function imprimir ($id) {

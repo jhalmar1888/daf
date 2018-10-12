@@ -1,7 +1,5 @@
-@extends('layout')
-
-@section('contenido')
-  
+@extends('layouts.app')
+@section('content')
     <div class="col-sm-8">
     <h2>
             Nuevo Cheque
@@ -16,8 +14,5 @@
 
             {!! Form::close() !!}        
     </div>
-    <div class="col-sm-4">
-        @include('products.fragment.aside')
-    </div>
-
+    
 @endsection

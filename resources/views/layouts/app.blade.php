@@ -10,6 +10,8 @@
         ]) !!};
         </script>
         <title>{{ config( 'app.name') }}</title>
+        @include('layouts.datatablecss')
+        @include('layouts.datatables')
         @include('layouts.css')
         @yield('css')
         @include('layouts.scripts')

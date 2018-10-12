@@ -28,8 +28,7 @@
 {{ Html::script('/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js')}}
 {{ Html::script('/assets/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js')}}
 
-{{ Html::script('/assets/plugins/DataTables/media/js/jquery.dataTables.js')}}
-{{ Html::script('/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js')}}
+
 {{ Html::script('/assets/plugins/select2/dist/js/select2.min.js')}}
 {{ Html::script('/assets/plugins/cytoscape/cytoscape.min.js')}}
 {{ Html::script('/assets/plugins/jstree/dist/jstree.min.js')}}

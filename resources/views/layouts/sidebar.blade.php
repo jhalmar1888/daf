@@ -5,17 +5,17 @@
         <!-- begin sidebar user -->
         <ul class="nav">
             <li class="nav-profile">
-                <div class="image">
+                {{-- <div class="image">
                     <a href="javascript:;">{!! Html::image('/storage/'. Auth::user()->Foto, Auth::user()->Usuario) !!}</a>
-                </div>
-                <div class="info">
+                </div> --}}
+                {{-- <div class="info">
                     @if (Auth::guest())
                         Invitado
                     @else
                         {{ Auth::user()->Usuario}}
                     @endif
                     <small>Conectado como: {{ Auth::user()->Rol ? Auth::user()->rol->Rol : ''}}</small>
-                </div>
+                </div> --}}
             </li>
         </ul>
         @include('layouts.menu')

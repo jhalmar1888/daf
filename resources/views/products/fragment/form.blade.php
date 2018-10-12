@@ -5,7 +5,7 @@
 
 </div>
 
-<div class="form-group">
+<div class="form-group ">
 
     {!! form::label('Cheque', 'No. cheque:') !!}
     {!! form::text('Cheque', null, ['class' => 'form-control']) !!}
@@ -47,13 +47,6 @@
 
 </div>
 
-<div class="form-group">
-
-    {!! form::label('MontoLiteral', 'Literal:') !!}
-    {!! form::text('MontoLiteral', null, ['class' => 'form-control']) !!}
-
-</div>
-
 
 <div class="form-group">
 
@@ -71,7 +64,7 @@
 
 <div class="form-group">
 
-    {!! form::submit('ENVIAR', ['class' => 'btn btn-[primary']) !!}
+    {!! form::submit('ENVIAR', ['class' => 'btn btn-primary']) !!}
 
 </div>
 

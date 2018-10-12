@@ -10,17 +10,17 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown navbar-user">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                {{-- <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                     {!! Html::image('/storage/'. Auth::user()->Foto, substr(Auth::user()->Usuario,0,1)) !!}
                     <span class="hidden-xs">{!! Auth::user()->Usuario !!}</span>
-                </a>
+                </a> --}}
                 <ul class="dropdown-menu animated fadeInLeft">
                     <li class="arrow"></li>
-                    <li><a href="{{route('Usuario.ResetPassword')}}">Cambiar Contraseña</a></li>
+                   {{--  <li><a href="{{route('Usuario.ResetPassword')}}">Cambiar Contraseña</a></li> --}}
                     <li class="divider"></li>
-                    <li><a href="{!! url('/logout') !!}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <li>{{-- <a href="{!! url('/logout') !!}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Cerrar Sesión
-                        </a>
+                        </a> --}}
                         <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                               style="display: none;">
                             {{ csrf_field() }}
