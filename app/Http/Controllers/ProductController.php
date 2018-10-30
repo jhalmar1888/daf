@@ -47,7 +47,7 @@ class ProductController extends Controller
         $product->MontoNumero  = $request->MontoNumero;
         
         $product->NomEmpresa = $request->NomEmpresa;
-        $product->Cuenta      = $request->Cuenta;
+        $product->Cuenta      = $request->NomEmpresa;
 
 //dd($product);
         $product->save();

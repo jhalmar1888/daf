@@ -29,11 +29,10 @@ class ProductRequest extends FormRequest
             'Cheque'        => 'required|numeric',
             'Fecha'         => 'required|date',
             'Objeto'        => 'required|regex:/^([a-zA-ZñÑáéíóúÁÉÍÓÚ_-])+((\s*)+([a-zA-ZñÑáéíóúÁÉÍÓÚ_-]*)*)+$/',
-            'Detalle'       => 'required|regex:/^([a-zA-ZñÑáéíóúÁÉÍÓÚ_-])+((\s*)+([a-zA-ZñÑáéíóúÁÉÍÓÚ_-]*)*)+$/',
             'DocRespaldo'  => 'required',
             'MontoNumero'         => 'required|numeric',
-            'Cuenta'        => 'required|numeric',
-
+/*             'Cuenta'        => 'required|numeric',
+ */
         ];
     }
 }

@@ -31,5 +31,6 @@ class Product extends Model
     public function empresas () {
         return $this->belongsTo(Empresa::class, 'NomEmpresa');
     }
+    
 
 }

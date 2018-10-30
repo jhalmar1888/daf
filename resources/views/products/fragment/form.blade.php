@@ -54,13 +54,13 @@
     {!! form::select('NomEmpresa', $empresas, null, ['class' => ' select2 form-control']) !!}
 
 </div>
-
+{{-- 
 <div class="form-group">
 
 {!! form::label('Cuenta', 'No cuenta:') !!}
 {!! form::select('Cuenta', $cuenta, null, ['class' => ' select2 form-control']) !!}
 
-</div>
+</div> --}}
 
 <div class="form-group">
 

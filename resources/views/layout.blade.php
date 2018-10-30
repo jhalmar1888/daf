@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="page-header text-center">ORDENgfdgdfgdfg DE PAGO</h1>
+                <h1 class="page-header text-center">ORDEN DE PAGO</h1>
             </div>
            @yield('content')
         </div> 

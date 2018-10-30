@@ -16,7 +16,17 @@
         @yield('css')
         @include('layouts.scripts')
         {{ Html::favicon( '/favicon.ico' ) }}
-        
+        <style>
+        html {
+            height:100%;
+            width:100%;
+        }
+        body{
+            background:#8ba987 url('/images/cofadena.png') no-repeat center center;
+            background-size:100% 100%;
+            
+        }
+        </style>
     </head>
     <body>
 

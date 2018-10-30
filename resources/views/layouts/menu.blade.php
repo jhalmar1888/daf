@@ -9,7 +9,7 @@
     <li class="{{ Request::is('products*') ? 'active' : '' }}">
         <a href="{{ route('products.index') }}">
             <i class="fa fa-free-code-camp"></i>
-            <span>{{ trans('labels.modules.Producto') }}</span>
+            <span>{{ trans('labels.modules.NewOrden') }}</span>
         </a>
     </li>
     <li class="{{ Request::is('empresas*') ? 'active' : '' }}">

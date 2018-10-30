@@ -8,6 +8,7 @@ return [
         'Activista' => 'Activista',        
         'Conflicto' => 'Conflicto',
         'Producto' => 'Producto',
+        'NewOrden' => 'Nueva Orden',
         'Empresa' => 'Empresa',
         
         'Dashboard' => 'Estadígrafos'
