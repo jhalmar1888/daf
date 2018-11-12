@@ -16,7 +16,8 @@
 	<queryString>
 		<![CDATA[SELECT id, "Ordenpago", "Cheque", "Fecha", "Objeto", "Detalle", "DocRespaldo",
  "MontoNumero", "MontoLiteral", "NomEmpresa", "Cuenta"
-FROM "Product";]]>
+FROM "Product"
+where id = $P{id}]]>
 	</queryString>
 	<field name="id" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.label" value="id"/>
@@ -86,7 +87,7 @@ FROM "Product";]]>
 			<staticText>
 				<reportElement x="1" y="0" width="449" height="30" uuid="e5f6758e-501f-406f-928b-ce6893157f9e"/>
 				<textElement>
-					<font fontName="Arial" size="12"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DEL				: Tcln. DIM. Juan José Garcia Paz
 				  GERENTE - U.E.R.H.]]></text>
@@ -94,7 +95,7 @@ FROM "Product";]]>
 			<staticText>
 				<reportElement x="0" y="30" width="499" height="30" uuid="ef47ed3c-6171-4831-b19b-5f5275227ada"/>
 				<textElement>
-					<font fontName="Arial" size="12"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[VIA				: Cr. José Alberto Huanca Quispe
 			              DIRECTOR ADMINISTRATIVO FINANCIERO a.i. U.E.R.H.]]></text>
@@ -102,14 +103,14 @@ FROM "Product";]]>
 			<staticText>
 				<reportElement x="1" y="61" width="349" height="19" uuid="d89b2277-88aa-4e89-916c-f2bb8ada51f6"/>
 				<textElement>
-					<font fontName="Arial" size="12"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[A				: CONTABILIDAD]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="81" width="249" height="18" uuid="babafd25-25ef-40a7-a058-00cf9ad26d3b"/>
 				<textElement>
-					<font fontName="Arial" size="12"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[OBJETO			:]]></text>
 			</staticText>
@@ -120,7 +121,7 @@ FROM "Product";]]>
 			<staticText>
 				<reportElement x="0" y="99" width="250" height="21" uuid="7ada74b5-a2f3-458a-a34c-908aeb65b498"/>
 				<textElement>
-					<font fontName="Arial" size="12"/>
+					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[FECHA			: La Paz,]]></text>
 			</staticText>
